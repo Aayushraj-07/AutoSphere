@@ -11,7 +11,7 @@ Clone the project repository using Git (replace <url> with the actual repository
 
 bash
 Copy code
-git clone <url>
+git clone https://github.com/Aayushraj-07/AutoSphere.git
 Navigate to the project directory.
 
 Build the project using Maven:
