@@ -9,16 +9,19 @@ Maven 3.x or Gradle 7.5+
 Running the application:
 Clone the project repository using Git (replace <url> with the actual repository URL):
 
-bash
-Copy code
-git clone https://github.com/Aayushraj-07/AutoSphere.git
-Navigate to the project directory.
 
-Build the project using Maven:
+Installation
 
-bash
-Copy code
-mvn clean package
+1. Clone the Repository:
+   git clone https://github.com/Aayushraj-07/AutoSphere.git)
+   cd AutoSphere
+2. Build the Project:
+   ./mvnw clean install
+3. Run the Application:
+   ./mvnw spring-boot:run
+4. Access the Application:
+    By default, the application runs on http://localhost:8080.
+
 
 API Endpoints:
 
