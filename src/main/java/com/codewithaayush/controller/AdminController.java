@@ -43,11 +43,13 @@ public class AdminController {
         return ResponseEntity.ok(null);
     }
 
+     @GetMapping("/car/{carId}")
     public ResponseEntity<CarDto> getCarById(@PathVariable Long id ) {
         CarDto carDto = adminService.getCarById(id);
         return ResponseEntity.ok(carDto);
     }
-
+    
+    @PutMapping("/car/{carId}")
     public ResponseEntity<Void> updateCar(@PathVariable Long carId, @ModelAttribute CarDto carDto) throws IOException {
         try {
             boolean success = adminService.updateCar(carId, carDto);
@@ -63,6 +65,7 @@ public class AdminController {
         return ResponseEntity.ok(adminService.getBookings());
       }
 
+      @GetMapping("/car/booking/{bookingId}/{}")
       public ResponseEntity<?> changeBookingStatus(@PathVariable Long bookingId, @PathVariable String status) {
         boolean success = adminService.changeBookingsStatus(bookingId, status);
         if(success) return ResponseEntity.ok().build();
